@@ -1,0 +1,10 @@
+<table class="table">
+    <tr *ngFor="let product of products">
+        <td>
+            <span class="id"> {{product.id}} </span>
+            <span class="name"> {{product.name}} </span>
+            <span class="price"> {{product.price}} </span>
+            <span class="delete" (click)="delete(product)"> × </span>
+        </td>
+   </tr>
+</table>
