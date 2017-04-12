@@ -1,6 +1,13 @@
+* {
+    font-family: Tahoma;
+    font-size: 20px;
+    color: #aaa; 
+}
+
 .table {
     margin: 0 auto;
 }
+
 tr {
     position: relative;
     color: #000;
@@ -21,9 +28,6 @@ tr {
 tr .name {
     color: forestgreen;
 }
-tr .price {
-    color: darkgoldenrod;
-}
 
 .delete {
     color: red;
@@ -36,4 +40,41 @@ tr .price {
 .delete:hover {
     font-weight: bold;
     color: darkred;
+}
+input {
+    display: block;
+
+}
+.inputStyle {
+    margin-bottom: 30px;
+    border-radius: 4px;
+    box-shadow: 2px 1px 1px 0 #ccc;
+    outline: none;
+    border: 1px solid #ddd;
+    padding-left: 4px;
+    padding-top: 4px; 
+    padding-bottom: 4px;
+    color: #000;
+}
+.hint {
+    display: block;
+}
+
+.inputAdd {
+    margin-bottom: 8px;
+    display: inline-block;
+    width: 158px;
+    margin-right: 14px;
+}
+.add {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    background: brown;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  
 }

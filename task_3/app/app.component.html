@@ -1,10 +1,55 @@
 <table class="table">
-    <tr *ngFor="let product of products">
-        <td>
-            <span class="id"> {{product.id}} </span>
-            <span class="name"> {{product.name}} </span>
-            <span class="price"> {{product.price}} </span>
-            <span class="delete" (click)="delete(product)"> × </span>
-        </td>
+    <tr *ngFor="let product of products"  [ngSwitch]="choice">
+
+        <div *ngSwitchCase="'0'">
+            <td *ngIf="product.category" >
+                <span class="id"> {{product.id}} </span>
+                <span class="name"> {{product.name}} </span>
+                                                
+                <span [style.color]="(product.price >= value) ? settings.red : settings.price " > {{product.price}} </span>
+                <span class="delete" (click)="delete(product)"> × </span>
+                <span> {{product.category}} </span>
+            </td>       
+        </div>
+
+        <div *ngSwitchCase="'1'">
+            <td *ngIf="product.category === 1" >
+                <span class="id"> {{product.id}} </span>
+                <span class="name"> {{product.name}} </span>
+                                                
+                <span [style.color]="(product.price >= value) ? settings.red : settings.price " > {{product.price}} </span>
+                <span class="delete" (click)="delete(product)"> × </span>
+            </td>       
+        </div>
+
+        <div *ngSwitchCase="'2'">
+            <td *ngIf="product.category === 2" >
+                <span class="id"> {{product.id}} </span>
+                <span class="name"> {{product.name}} </span>
+                                                
+                <span [style.color]="(product.price >= value) ? settings.red : settings.price " > {{product.price}} </span>
+                <span class="delete" (click)="delete(product)"> × </span>
+            </td>       
+        </div>
+
+        <div *ngSwitchCase="'3'">
+            <td *ngIf="product.category === 3" >
+                <span class="id"> {{product.id}} </span>
+                <span class="name"> {{product.name}} </span>
+                                                
+                <span [style.color]="(product.price >= value) ? settings.red : settings.price " > {{product.price}} </span>
+                <span class="delete" (click)="delete(product)"> × </span>
+            </td>       
+        </div>
+
    </tr>
+
+   Make your choice <input type="text" class="inputStyle" [(ngModel)]="choice" />
+
+   <p class="hint"> Add your own product </p>
+   <input type="text" class="inputStyle inputAdd" [(ngModel)]="title" placeholder="title.." /> 
+   <input type="text" class="inputStyle inputAdd" [(ngModel)]="price" placeholder="price.."/> 
+   <input type="text" class="inputStyle inputAdd" [(ngModel)]="category" placeholder="category.."/> 
+   <button (click)="add()" class="add" > add </button>
 </table>
+
