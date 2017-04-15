@@ -1,7 +1,7 @@
 <table class="table">
     <tr *ngFor="let product of products"  [ngSwitch]="choice">
-
-        <div *ngSwitchCase="'0'">
+    
+        <div *ngSwitchCase="''">
             <td *ngIf="product.category" >
                 <span class="id"> {{product.id}} </span>
                 <span class="name"> {{product.name}} </span>
@@ -44,7 +44,10 @@
 
    </tr>
 
-   Make your choice <input type="text" class="inputStyle" [(ngModel)]="choice" />
+   Make your choice 
+   <span class="categoryHint">1||2||3</span>
+   <input type="text" ng-value="0028" class="inputStyle" [(ngModel)]="choice"/>
+   
 
    <p class="hint"> Add your own product </p>
    <input type="text" class="inputStyle inputAdd" [(ngModel)]="title" placeholder="title.." /> 
