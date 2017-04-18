@@ -1,0 +1,16 @@
+<h1> Products list </h1>
+
+<ul *ngFor="let product of products" >
+    <li (click)="onSelect(product)"> {{product.name}} </li>      
+</ul>
+<router-outlet></router-outlet>
+
+
+<ul class="phrases">
+    <li *ngFor="let phrase of phrases"
+        (click)="onSelect(phrase)"
+        [class.selected]="isSelected(phrase)">
+        {{phrase.value}}
+    </li>
+</ul>
+<router-outlet></router-outlet>
