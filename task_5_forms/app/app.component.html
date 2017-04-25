@@ -1,0 +1,50 @@
+<form [formGroup]="addItemForm" (ngSubmit)="addItem()" > 
+    
+    <label for="name"> Name </label>
+    <input  type="text" 
+            id="name" 
+            placeholder="enter your name"
+            formControlName="name"
+            [(ngModel)]="name">
+    <div *ngIf="formErrors.name" class="notification" > 
+            {{formErrors.name}}
+    </div>
+    
+
+    <label for="age"> Age </label>
+    <input type="text" 
+           id="age"  
+           placeholder="enter your age" 
+           formControlName="age" 
+           [(ngModel)]="age">
+    <div *ngIf="formErrors.age" class="notificationAge" > 
+            {{formErrors.age}}
+    </div>
+
+
+    <label for="post"> Post </label>
+    <select class="post" 
+            id="post"
+            formControlName="post">
+        <option *ngFor="let post of posts" [value]="post" >
+            {{post}}
+        </option>
+    </select>
+
+
+    <input type="submit" 
+           class="submit" 
+           [disabled]="addItemForm.invalid" 
+           value="Add"
+    />
+
+</form>
+
+
+<ul>
+    <li *ngFor="let item of items"> 
+         Name - {{item.name}}  <br/>
+         Age - {{item.age}}  <br/>
+         Post - {{item.post}} 
+    </li>
+</ul>
