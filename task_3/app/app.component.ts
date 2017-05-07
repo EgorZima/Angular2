@@ -13,9 +13,12 @@ export class AppComponent {
     products = this.dataService.getData();
     value:number = 500;
     choice;
-    title: string = '';
-    price: number = 0;
-    category: number = 0;
+    title: string;
+    price: number;
+    category: number;
+    
+    length = this.products.length;
+
 
     settings = {
         red: 'red',
@@ -27,14 +30,16 @@ export class AppComponent {
           
         if (index > -1) {
              this.products.splice(index, 1);
-        }     
+        }  
+
     };
 
 
     add() {
+        console.log('egsdbsdg')
         this.products.push(
             { 
-              id: this.products.length + 1, 
+              id: this.length + 1, 
               name: this.title, 
               price: this.price,
               category: this.category

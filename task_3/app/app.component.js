@@ -16,9 +16,7 @@ var AppComponent = (function () {
         this.dataService = dataService;
         this.products = this.dataService.getData();
         this.value = 500;
-        this.title = '';
-        this.price = 0;
-        this.category = 0;
+        this.length = this.products.length;
         this.settings = {
             red: 'red',
             price: 'darkgoldenrod'
@@ -33,8 +31,9 @@ var AppComponent = (function () {
     };
     ;
     AppComponent.prototype.add = function () {
+        console.log('egsdbsdg');
         this.products.push({
-            id: this.products.length + 1,
+            id: this.length + 1,
             name: this.title,
             price: this.price,
             category: this.category
