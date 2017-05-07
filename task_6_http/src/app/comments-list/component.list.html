@@ -1,0 +1,22 @@
+<div *ngIf="comments" class="comments-list">
+    <span class="title" > All people comments </span>
+    <ul> 
+        <li *ngFor="let comment of comments" >
+            <span class="name">
+                {{comment.userName}}
+            </span>
+
+            <span class="text">
+                {{comment.commentText}}
+            </span>
+
+            <span class="date">
+                {{comment.date}}
+            </span>
+
+            <input type="submit" (click)="deleteComment(comment)" value="delete comment" class="delete" />
+        </li>
+    </ul>
+</div>
+
+<input type="submit" value="refresh" (click)="refresh()" class="refresh"/>

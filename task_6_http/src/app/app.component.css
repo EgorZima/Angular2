@@ -1,0 +1,162 @@
+* {
+    font-family: Tahoma;
+}
+
+h1 {
+    text-align: center
+}
+
+.comments-list {
+    background: #fff;
+    border-radius: 10px;
+    padding-bottom: 4px;
+}
+.title {
+    display: block;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 2px solid #ffb0b0;
+    border-bottom: 4px solid #fa4d4d;
+    font-size: 30px;
+    background: #ff8282;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+ul {
+    padding-left: 0;
+}
+li {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #d4d4d4;
+    border-radius: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    position: relative
+}
+
+.name {
+    display: inline-block;
+    font-size: 24px;
+    padding: 4px;
+    margin-bottom: 4px;
+
+    
+}
+
+.text {
+    display: block;
+    background: #f5f5f5;
+    font-size: 20px;
+    border-radius: 4px;
+    padding: 6px;
+    margin-bottom: 4px;
+}
+
+.date {
+    display: block;
+    position: absolute;
+    color: #000;
+    right: 4px;
+    top: 10px;
+}
+
+.delete {
+    padding: 4px;
+    transition: 0.3s;
+    background: #aaa;
+    outline: none;
+    color: white;
+    border: none;
+    margin-top: 6px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.delete:hover {
+    background: #000;
+}
+
+.refresh {
+    width: 100px;
+    transition: 0.3s;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    color: #fff;
+    background: #000;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.refresh:hover {
+    background: #aaa;
+}
+
+.container {
+    background: #636363; 
+    border-radius: 6px;
+    color: #000;
+    padding: 10px;
+    position: relative;
+
+}
+.form-group {
+    background: #e5e5e5;
+    margin-bottom: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+}
+.form-control {
+    width: 300px;
+    border: 1px solid #adadad;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.label-name {
+    margin-right: 35px;
+}
+.label-text {
+    margin-right: 10px;
+}
+.label-date {
+    margin-right: 81px;
+}
+
+.btn {
+    margin-left: 400px;
+    padding: 10px;
+    background: #424242;
+    outline: none;
+    border: 1px solid #4d4d4d;
+    color: #ebebeb;
+    font-size: 20px;
+    border-radius: 6px;
+    margin-top: 6px;
+    cursor: pointer;
+    transition:0.4s;
+}
+.btn:hover {
+    background: #8c8b8b;
+    border: 1px solid transparent;
+}
+
+:disabled {
+    background: #e0e0e0;
+    color: #fcfcfc; 
+    cursor: not-allowed  
+}
+:disabled:hover{
+    background: #e0e0e0;
+}
+
+
+ 
