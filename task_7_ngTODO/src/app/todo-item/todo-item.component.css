@@ -1,0 +1,67 @@
+.todo-item {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: #fafafa;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #d4d4d4;
+    position: relative;
+    transition: 0.2s;
+} 
+.todo-item :last-child {
+    margin-bottom: none;
+}
+
+.item-title {
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 26px;   
+}
+
+.icon  {
+    outline: none;
+    border: none;
+    background: transparent;
+    width:24px;
+    height: 24px;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  
+  display: inline-block;
+  width: 24px; 
+  height: 24px;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: 'liga';
+}
+
+.checkbox {
+    margin-left: 10px;
+    color: #4d4d4d;
+    display: inline-block;
+}
+.delete {
+    position: absolute;
+    right: 10px;
+    display: inline-block;
+    transition: 0.2s;
+    color: #4d4d4d;
+}
+.delete:hover {
+    color: #969292;
+    transition: 0.2s;
+}
+
+.completed {
+    text-decoration: line-through #b5b5b5 ;
+    background: #e8e6e6;
+    color: #fff;
+}

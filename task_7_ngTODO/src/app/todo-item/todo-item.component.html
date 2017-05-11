@@ -1,0 +1,13 @@
+<div class="todo-item"  [class.completed]="todo.completed">
+    <button class="icon checkbox" (click)="onToggle()">
+        <i class="material-icons" >{{ todo.completed ? 'check_box' : 'check_box_outline_blank'}}</i>
+    </button>
+
+    <span class="item-title"> {{todo.title}} </span>
+    
+    <button class="icon delete" (click)="onDelete()" >
+        <i class="material-icons">delete</i>
+    </button>
+</div>
+
+
